@@ -43,12 +43,12 @@ servo1.ChangeDutyCycle(0)
 # Another little 2 second pause...
 time.sleep(2)
 
-# Turn both servos back to 0
+# Turn both servos back to 90
 servo2.ChangeDutyCycle(2)
 servo1.ChangeDutyCycle(2)
 time.sleep(0.5)
-servo2.ChangeDutyCycle(0)
-servo1.ChangeDutyCycle(0)
+servo2.ChangeDutyCycle(90)
+servo1.ChangeDutyCycle(90)
 
 time.sleep(2)
 
@@ -57,4 +57,4 @@ servo1.stop()
 servo2.stop()
 GPIO.cleanup()
 
-print ("Goodbye")
+print ("Finished turning and setting angle to 90°")
