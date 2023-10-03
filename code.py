@@ -1,7 +1,5 @@
 
-servo control: 
 
-servo1.start(0)
 
 import time 
 
