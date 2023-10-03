@@ -33,4 +33,4 @@ finally:
     servo1.stop()
     servo2.stop()
     GPIO.cleanup()
-    print("Goodbye!")
+    print("Complete")
