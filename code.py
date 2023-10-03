@@ -1,66 +1,1017 @@
+# Import libraries
 
-
-
-import time 
-
-import RPi.GPIO as GPIO 
-
- 
-OUT_PIN = 11
-PULSE_FREQ = 50
+#Numbers 2 = 0°, 12 = 180°
+import RPi.GPIO as GPIO
+import time
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(OUT_PIN, GPIO.OUT) 
+
+GPIO.setup(11,GPIO.OUT)
+servo1 = GPIO.PWM(11,50) # pin 11 for servo1
+GPIO.setup(12,GPIO.OUT)
+servo2 = GPIO.PWM(12,50) # pin 12 for servo2
+
+# Start PWM running on both servos, value of 0 (pulse off)
+servo1.start(0)
+servo2.start(0)
+
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(2)
+time.sleep(0.5)
+servo1.ChangeDutyCycle(2)
+
+# Wait for 2 seconds
+time.sleep(2)
+
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+time.sleep(2)
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+
+# Wait again for 2 seconds! :)
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
+
+# Another little 2 second pause...
+time.sleep(2)
+
+servo2.ChangeDutyCycle(2)
+servo1.ChangeDutyCycle(2)
+time.sleep(2)
+servo2.ChangeDutyCycle(12)
+servo1.ChangeDutyCycle(12)
 
 
-def main():
-    print("Starting")
-    servo1 = GPIO.PWM(OUT_PIN, PULSE_FREQ) 
+time.sleep(2)
 
-    servo1.start(0) 
+#Clean things up at the end
+servo1.stop()
+servo2.stop()
+GPIO.cleanup()
 
-    print("Spinning")
-    
-    # Test the full range of movement. Note only integers are allowed.
-    for x in range(2, 12):
-        servo1.ChangeDutyCycle(x)
-        time.sleep(0.5)
-    
-    # Start over and move in bigger, slower movements.
-    servo1.ChangeDutyCycle(2)
-    time.sleep(1)
-    servo1.ChangeDutyCycle(7)
-    time.sleep(1)
-    servo1.ChangeDutyCycle(12)
-    time.sleep(4)
-    
-    # Jump between the opposite positions.
-    servo1.ChangeDutyCycle(2)
-    time.sleep(1)
-    servo1.ChangeDutyCycle(12)
-    time.sleep(1)
-    servo1.ChangeDutyCycle(2)
-    time.sleep(1)
-    servo1.ChangeDutyCycle(12)
-    time.sleep(4)
-    
-    # Test the fastest movement possible - no sleeping.
-    servo1.ChangeDutyCycle(2)
-    servo1.ChangeDutyCycle(12)
-    servo1.ChangeDutyCycle(2)
-    servo1.ChangeDutyCycle(12)
-    servo1.ChangeDutyCycle(2)
-    servo1.ChangeDutyCycle(12)
-    servo1.ChangeDutyCycle(2)
-    servo1.ChangeDutyCycle(12)
-    
-    servo1.stop() 
-    GPIO.cleanup()
-
-
-if __name__ == "__main__":
-    main()
-
-
-
- 
+print ("Goodbye")
